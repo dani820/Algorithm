@@ -6,7 +6,6 @@ public class Programmers1 {
 	// 2개의 행렬 arr1과 arr2를 입력받아, 행렬 덧셈의 결과를 반환하는 함수, solution을 완성해주세요.
 	// 행렬 arr1, arr2의 행과 열의 길이는 500을 넘지 않습니다.
 	
-	class Solution {
 	    public int[][] solution(int[][] arr1, int[][] arr2) {
 	        int[][] answer = {}; // answer 배열 객체 생성 
 	        answer = arr1; // arr1 배열을 answer 객체에 담는다.(차후 연산을 위해)
@@ -19,5 +18,4 @@ public class Programmers1 {
 	        }
 	        return answer;
 	    }
-	}
 }

@@ -8,7 +8,6 @@ public class Programmers2 {
 	// x는 -10000000 이상, 10000000 이하인 정수입니다.
 	// n은 1000 이하인 자연수입니다.
 	
-	class Solution {
 	    public long[] solution(int x, int n) {
 	        long[] answer = new long[n]; // answer 배열의 초기값을 넣어주기 위해 배열 초기화를 해준다.
 	        answer[0] = x; // 0번째 값으로 x 를 넣어준다.
@@ -19,5 +18,4 @@ public class Programmers2 {
 	        
 	        return answer;
 	    }
-	}
 }
