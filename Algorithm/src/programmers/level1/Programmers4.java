@@ -1,22 +1,25 @@
 package programmers.level1;
 
 public class Programmers4 {
-	// 핸드폰 번호 가리기
-	// 프로그래머스 모바일은 개인정보 보호를 위해 고지서를 보낼 때 고객들의 전화번호의 일부를 가립니다.
-	// 전화번호가 문자열 phone_number로 주어졌을 때, 전화번호의 뒷 4자리를 제외한 나머지 숫자를 전부 *으로 가린 문자열을 리턴하는 함수, solution을 완성해주세요.
+	// 하샤드 수
+	// 양의 정수 x가 하샤드 수이려면 x의 자릿수의 합으로 x가 나누어져야 합니다.
+	// 예를 들어 18의 자릿수 합은 1+8=9이고, 18은 9로 나누어 떨어지므로 18은 하샤드 수입니다.
+	// 자연수 x를 입력받아 x가 하샤드 수인지 아닌지 검사하는 함수, solution을 완성해주세요.
 	// 제한 조건
-	// s는 길이 4 이상, 20이하인 문자열입니다.
+	// x는 1 이상, 10000 이하인 정수입니다.
 	
-	    public String solution(String phone_number) {
-	        String answer = "";
-	        
-	        for(int i = 0; i < phone_number.length()-4; i++) { // 문자열 길이에서 마지막 숫자 4개는 살릴 것이기 때문에 제외한 개수만큼 answer 에 * 를 대입한다.
-	            answer += "*";
-	        }
-	        
-	        answer += phone_number.substring(phone_number.length() - 4); // substring 을 사용하여 나머지 숫자 4개를 answer 에 붙인다.
-	        // substring(index) 원칙에 따라 숫자 네개를 뺀 나머지 자리가 앞쪽부터 순서대로 잘리기 때문에 온전한 숫자는 마지막 4개만 리턴된다.  
-	        
-	        return answer;
-	    }
+    public boolean solution(int x) {
+        boolean answer = true;
+        
+        int y = x / 10;
+        int z = x % 10;
+        
+        if(x % (y + z) != 0) { 
+            answer = false;       
+        }else {
+            answer = true;
+        }
+        
+        return answer; 
+    }
 }
