@@ -1,10 +1,11 @@
 package programmers.level1;
 
-// board game
+// Board game
 // A 게임은 4x4 격자 모양의 보드의 가장 왼쪽 위에서 가장 오른쪽 아래로 말을 이동시키면서 각 구역에 있는 코인을 획득하는 게임입니다. 
 // 이때, 말은 오른쪽 또는 아래쪽으로만 이동할 수 있습니다.***
 // 각 구역에서 획득할 수 있는 코인 양을 담은 2차원 배열 board가 매개변수로 주어질 때, 
 // 최대로 획득할 수 있는 코인의 양을 return 하도록 solution 메소드를 작성했습니다.***
+
 class Solution6 {
     public int solution(int[][] board) {
         int answer = 0;
@@ -19,6 +20,7 @@ class Solution6 {
                 else if(i != 0 && j == 0)
                     coins[i][j] = board[i][j] + coins[i-1][j]; // 아래로 이동했을 경우 board 배열에서 이동 전 *위쪽* 값과 현재 좌표 값 더해서 coins 배열에 넣기
                 else
+                	// CATCH!!!!!
                     coins[i][j] = board[i][j] + Math.max(coins[i][j-1], coins[i-1][j]); // 대각선으로 이동했을 때 수행할 구문으로 최대로 획득할 수 있는 코인 양을 구하는 것이기 때문에
                 																		// 현좌표 위, 왼쪽 값을 비교하여 최대값을 구하고 더해 나간다.
             }
