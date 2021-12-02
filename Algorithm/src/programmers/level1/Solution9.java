@@ -2,7 +2,7 @@ package programmers.level1;
 // 다음과 같이 import를 사용할 수 있습니다.
 import java.util.*;
 
-// blooming
+// minimum number of differences 
 
 class Solution9 {
 	 public int solution(int[] arr, int K) {
